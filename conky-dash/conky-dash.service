@@ -1,0 +1,18 @@
+[Unit]
+Description=Сбор статистики для дешборда-обоев
+After=graphical-session.target
+# Restart=always без ограничителя означает, что неустранимая ошибка крутила бы
+# перезапуск каждые 5 с бесконечно, засоряя журнал (он лежит на диске).
+# После 5 падений за 5 минут systemd прекращает попытки.
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/susu/.local/share/conky-dash/gen.py
+Restart=always
+RestartSec=5
+Nice=10
+
+[Install]
+WantedBy=default.target

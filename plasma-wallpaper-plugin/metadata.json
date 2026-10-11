@@ -1,0 +1,13 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Id": "org.susu.dashboard",
+        "Name": "Системный дешборд",
+        "Description": "Обои с системной статистикой, встроенной в рабочий стол",
+        "Icon": "utilities-system-monitor",
+        "License": "MIT",
+        "Category": "",
+        "Authors": [ { "Name": "susu" } ]
+    },
+    "X-KDE-ParentApp": "org.kde.plasmashell"
+}
